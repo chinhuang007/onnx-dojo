@@ -74,12 +74,12 @@ Goal of unit 3: At the end of unit 3, you will learn how to create a branch, mak
         ```
     - Check branch status. ``` git status ``` should show a new file as changes to be committed
 
-    - Next create a commit with ``` git status ```
-        - You should be in the editor you specified earlier
-        - The first line is the commit title, such as “Add John Doe”
+    - Next create a commit
+        - ``` git commit ```
+        - You should be in the editor you specified earlier.
+        - The first line is the commit title, such as “Add John Doe”.
         - Put an empty line and the text below will be the commit message, describing why the commit exists
-        - Once done exit the editor with a normal exit and save
-        
+        - Once done exit the editor with a normal save and exit        
     - Check branch status. ``` git status ``` should show you are on your branch with nothing to commit
 4. Push up a commit
     - Now you need to push the commit up to the remote repo.
@@ -99,7 +99,7 @@ Goal of unit 4: At the end of unit 4, you will learn how to create, review and m
 
 1. Create a pull request
     - In a browser, go to https://github.com/chinhuang007/onnx-dojo and click “compare & pull request” button for your branch
-    - You could add more detailed message, screen shots, links to issues and other PRs. Lets add a person mention so he/she will get an email notification for the change.
+    - You could add more detailed message, screen shots, links to issues and other PRs. Let's add a person mention so he/she will get an email notification for the change.
     - Type ‘@chinhuang007 Check this out” in the text field.
     - Click “Create pull request” button.
     - Verify: The pull request is created. Notification is sent to the person you specified earlier. If there is Continuous Integration (CI) configured for the repo, CI tasks will be run (not in this example).
@@ -107,10 +107,10 @@ Goal of unit 4: At the end of unit 4, you will learn how to create, review and m
 2. Review a pull request (instructors walk-through)
     - In a browser, go to https://github.com/chinhuang007/onnx-dojo and click “Pull Requests” tab.
     - Find the pull request with title “Add John Doe”
-    - Associate with an issue, requiring permissions
+    - Associate with an issue (need permissions)
     - Review the changes and run tests if needed
     - Leave a comment
-    - Provide final review and approval, requiring permissions (options: comment, request changes, approve)
+    - Provide final review and approval (need permissions)
     - Verify: The pull request has one approval.
     - Verify: The “merge pull request” button is green for the users with merge permissions.
 3. Merge a pull request (instructors walk-through)
@@ -126,7 +126,7 @@ Goal of unit 4: At the end of unit 4, you will learn how to create, review and m
       git branch -D add-your-name-profile
       ```
     - Verify: ``` git branch ``` should show master only
-    - You can delete the remote branch from UI, either from upstream or you
+    - You can delete the remote branch from UI, either from upstream or your repo
     - Rebase your master branch so you are in sync with upstream master.
       ```
       git fetch upstream
