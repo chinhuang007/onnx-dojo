@@ -100,7 +100,41 @@ Goal of unit 4: At the end of unit 4, you will learn how to create, review and m
 1. Create a pull request
     - In a browser, go to https://github.com/chinhuang007/onnx-dojo and click “compare & pull request” button for your branch
     - You could add more detailed message, screen shots, links to issues and other PRs. Lets add a person mention so he/she will get an email notification for the change.
-    - To make changes and later create commits, we need to create a local branch to work on.
-        ```
-        git checkout –b add-your-name-profile 
-        ```
+    - Type ‘@chinhuang007 Check this out” in the text field.
+    - Click “Create pull request” button.
+    - Verify: The pull request is created. Notification is sent to the person you specified earlier. If there is Continuous Integration (CI) configured for the repo, CI tasks will be run (not in this example).
+    - Verify: You should see “This branch has no conflicts with the base branch”.
+2. Review a pull request (instructors walk-through)
+    - In a browser, go to https://github.com/chinhuang007/onnx-dojo and click “Pull Requests” tab.
+    - Find the pull request with title “Add John Doe”
+    - Associate with an issue, requiring permissions
+    - Review the changes and run tests if needed
+    - Leave a comment
+    - Provide final review and approval, requiring permissions (options: comment, request changes, approve)
+    - Verify: The pull request has one approval.
+    - Verify: The “merge pull request” button is green for the users with merge permissions.
+3. Merge a pull request (instructors walk-through)
+    - Click “Merge Pull Request”
+    - Click “Confirm Merge”
+    - Verify: The pull request status is changed from “Open” to “Closed”
+    - Verify: The associated issue is also changed from “Open” to “Closed”
+    - Verify: The repo is updated with the changes.
+4. Delete working branch and rebase master (optional)
+    - Once a pull request is merged, the working branch can be deleted.
+      ```
+      git checkout master
+      git branch -D add-your-name-profile
+      ```
+    - Verify: ``` git branch ``` should show master only
+    - You can delete the remote branch from UI, either from upstream or you
+    - Rebase your master branch so you are in sync with upstream master.
+      ```
+      git fetch upstream
+      git rebase upstream/master
+      git push origin master
+      ```
+    - Enter your git user name and password when prompted
+    - Your remote repo master should be updated now.
+    - Verify: go to https://github.com/<user-name>/onnx-dojo and check your master branch is even with upstream master
+    - Verify: navigate through https://github.com/<user-name>/onnx-dojo to see the latest contents
+    - Now you are good to go, working on next PR!
