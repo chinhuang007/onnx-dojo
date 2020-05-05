@@ -1,12 +1,9 @@
 # onnx-dojo
 
-The repo is for the ONNX Dojo training course, including presentations, participants, and materials for the lab exercises in sub-folders.
-
-System requirements: Mac, Linux, or Windows 10 with Subsystem for Linux (Ubuntu 18.0.4)
-
-Prereqs: python3, git, cmake, protobuf-compiler libprotoc-dev
+The repo is for the ONNX Dojo training course. It is organized with presentations, participants, and materials for the lab exercises in sub-folders.
 
 Agenda:
+
 Day 1 (Morning) 8am - 11am, Pacific
   - Opening - Chin Huang
   - Open Source at IBM - 15 min. https://ibm.box.com/s/ioa38f82sbhrv340vyic5m66jcbo4jwv
@@ -28,7 +25,12 @@ Day 2 (Morning) 8am - 11am, Pacific
   - ONNX-MLIR tutorials/code walkthrough - 45 min. Tian Jin
   - Wrap up - Chin Huang 
 
-Exercises:
+Lab exercises:
+
+System requirements: Mac, Linux, or Windows 10 with Subsystem for Linux (Ubuntu 18.0.4)
+
+Prereqs: python3, git, cmake, protobuf-compiler libprotoc-dev
+
 * Exercise 1: git - Get familiar with git from fork to PR
 * Exercise 2: resnet - Run ResNet model in Tensorflow
 * Exercise 3: constant_pr - Develop support for a new/updated operator 
