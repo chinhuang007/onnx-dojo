@@ -81,4 +81,26 @@ Goal of unit 3: At the end of unit 3, you will learn how to create a branch, mak
         - Once done exit the editor with a normal exit and save
         
     - Check branch status. ``` git status ``` should show you are on your branch with nothing to commit
+4. Push up a commit
+    - Now you need to push the commit up to the remote repo.
+        ```
+        git push origin add-your-name-profile        
+        ```
+    - Enter your git user name and password when prompted
+    - Check your commit is pushed up and ready for a pull request
+        - In a browser, go to https://github.com/chinhuang007/onnx-dojo and your branch should appear as ready for a pull request
+        - Next go to https://github.com/<user-rname>/onnx-dojo and click on Branch: master and switch to “add-your-name-profile” branch
+        - Navigate to profiles folder and your newly added file should be there
+
     
+# Git Hands-on Unit 4: Create and merge pull request
+
+Goal of unit 4: At the end of unit 4, you will learn how to create, review and merge a pull request
+
+1. Create a pull request
+    - In a browser, go to https://github.com/chinhuang007/onnx-dojo and click “compare & pull request” button for your branch
+    - You could add more detailed message, screen shots, links to issues and other PRs. Lets add a person mention so he/she will get an email notification for the change.
+    - To make changes and later create commits, we need to create a local branch to work on.
+        ```
+        git checkout –b add-your-name-profile 
+        ```
