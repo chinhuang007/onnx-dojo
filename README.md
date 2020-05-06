@@ -14,7 +14,7 @@ Day 1 (Morning) 8am - 11am, Pacific
 Day 1 (Afternoon) 11:30am - 2:30pm, Pacific
   - ONNX Community and Contributor Resources - 15 min. Chin Huang
   - Overview of ONNX GitHub repositories - 30 min. Chin Huang
-  - ONNX Development Environment - 15 min. Chin Huang
+  - ONNX Development Environment with hands-on - 30 min. Chin Huang
   - High level code walk-through of major components ONNX-Tensorflow converter - 45 min. Winnie Tsang
   - Open Lab: Run ResNet model in Tensorflow - 45 min. Chin Huang
 
