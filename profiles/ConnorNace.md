@@ -1,4 +1,4 @@
-# Chin Huang 
+# Connor Nace
 
 Email: connor.nace@us.ibm.com
 
