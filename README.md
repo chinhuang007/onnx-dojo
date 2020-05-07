@@ -8,7 +8,7 @@ Day 1 (Morning) 8am - 11am, Pacific
   - Opening - Chin Huang
   - Open Source at IBM - 15 min. https://ibm.ent.box.com/file/656007169789
   - Git hands-on - 60 min. Chin Huang
-  - Introduction to ONNX - 60 min. Chin Huang
+  - Introduction to ONNX - 45 min. Chin Huang
   - ONNX training - 30 min. Svetlana Levitan
 
 Day 1 (Afternoon) 11:30am - 2:30pm, Pacific
