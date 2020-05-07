@@ -31,10 +31,13 @@
       git remote add upstream https://github.com/onnx/onnx-tensorflow.git
       git remote -v
       ```
-    - Verify your fork master is up-to-date
+    - Verify your fork master is up-to-date by navigate your browser to your
+    fork https://github.com/<your-git-user-name\>/onnx-tensorflow
+      - If your master is up-to-date then you should find “This branch is even
+      with onnx:master” display on the top.
+      - If you don’t see the above message then your master is out-of-date,
+      please run the following commands to update it
       ```
-      git checkout master
-      # If your master is out-of-date then run the following commands
       git fetch upstream
       git merge upstream/master
       git push origin master
@@ -51,46 +54,48 @@
     ```
 6. Update test_constant unit test in onnx-tensorflow/test/backend/test_node.py
     ```
-    cd onnx-tensorflow/test/backend
+    cd test/backend
     vi test_node.py
     # When you are ready to test run your updated test_constant run the following
-    # command
+    # command and the test is expected to failed because you didn't update the
+    # handler yet
     python test_node.py TestNode.test_constant
     ```
 7. Update Constant handler in onnx-tensorflow/onnx_tf/handlers/backend/constant.py
 
     - Edit constant.py
       ```
-      cd ../../ onnx_tf/handlers/backend
+      cd ../../onnx_tf/handlers/backend
       vi constant.py
       ```
     - When you are ready to test your handler, please register your updated handler
   to onnx-tensorlfow/onnx_tf/opset_version.py by the following command
       ```
-      python ../../gen_opset.py
-      cat ../../opset_version.py | grep Constant
+      cd ../../
+      python gen_opset.py
+      cat opset_version.py | grep Constant
       ```
     - Test/debug your updated handler by running your updated Constant unit test
   in onnx-tensorflow/test/backend/TestNode.py on step 6
       ```
-      python ../../../test/backend/test_node.py TestNode.test_constant
+      cd  ../test/backend
+      python test_node.py TestNode.test_constant
       ```
 8. After successfully run the unit test of Constant in test_node.py then please
-verify all the other tests under onnx-tensorlfow/test/backend folder are pass
-too.
+verify your change doesn't create any new error in other tests under
+onnx-tensorlfow/test/backend folder. PS test_onnx_backend.py may need to take
+about 20 to 40 minutes to complete, depending on your hardware configurations.
     ```
-    cd ../../../test/backend
     python test_node.py
     python test_dynamic_shape.py
     python test_model.py
     python test_onnx_backend.py
-    cd ../
-    python test_cli.py
+    python ../test_cli.py
     ```
 9. Update support status report for Constant
     ```
     cd ../../onnx_tf
-    python gen_status.py –v master
+    python gen_status.py -v master
     cat ../doc/support_status.md | grep Constant
     ```
 10. Verify all changed files follow the recommended code format on
